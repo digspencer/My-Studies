@@ -13,3 +13,5 @@ function soma (a, b = 0) {
 }
 
 console.log(soma(10)); //Funciona pq o primeiro parametro é 10 e o segundo é 0 por padrão, no caso 10 + 0 = 10
+
+//Estou dentro da branch nova
