@@ -6,11 +6,20 @@ class Animais {
         console.log(`${this.nome} made some noise :)`)
     }
     bark(){
-        console.log(`${this.nome} emitiu o som de au au !`)
+        console.log(`${this.nome} emitiu um som de au au !`)
+    }
+    sing(){
+        console.log(`${this.nome} emitiu um som tiu fiu fiu !`)
     }
 }
 
 class dog1 extends Animais {
+    constructor(nome){
+        super(nome);
+    }
+}
+
+class passaro extends Animais{
     constructor(nome){
         super(nome);
     }
@@ -24,3 +33,7 @@ dog.bark()
 
 const dog2 = new dog1("Bob")
 dog2.speak()
+
+const passarinho = new passaro("Tiziu")
+
+passarinho.sing()
