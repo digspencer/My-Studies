@@ -1,39 +1,29 @@
-class Animais {
-    constructor(nome){
+class Empregado {
+    constructor(nome, sobrenome, profissao, salario){
         this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.profissao = profissao;
+        this.salario = salario;
     }
-    speak(){
-        console.log(`${this.nome} made some noise :)`)
+    batePonto(){
+        console.log(`${this.nome} bateu o ponto!`)
     }
-    bark(){
-        console.log(`${this.nome} emitiu um som de au au !`)
-    }
-    sing(){
-        console.log(`${this.nome} emitiu um som tiu fiu fiu !`)
+    DDS(){
+        console.log(`${this.nome} participou do DDS! `)
     }
 }
 
-class dog1 extends Animais {
+class engenheiro extends Empregado{
     constructor(nome){
         super(nome);
     }
 }
 
-class passaro extends Animais{
-    constructor(nome){
-        super(nome);
-    }
-}
+const dev = new Empregado("Diego", "Souza", "Dev", 3.500)
+console.log(dev.salario)
 
-const gatoTom = new Animais("Gato Tom")
-gatoTom.speak()
+const engenheiroS = new engenheiro("Tasso")
 
-const dog = new Animais("Doguinho")
-dog.bark()
 
-const dog2 = new dog1("Bob")
-dog2.speak()
-
-const passarinho = new passaro("Tiziu")
-
-passarinho.sing()
+dev.DDS()
+engenheiroS.DDS()
